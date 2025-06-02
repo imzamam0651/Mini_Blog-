@@ -41,6 +41,7 @@ curl -X POST http://127.0.0.1:8000/api/register/ \
   "token": "0123456789abcdef0123456789abcdef01234567"
 }
 
+
 2. User Login
 POST /api/login/
 
@@ -90,6 +91,7 @@ curl -X POST http://127.0.0.1:8000/api/posts/ \
   "author": 1,
   "created_at": "2025-05-31T14:20:00Z"
 }
+
 
 4. List All Posts
 Retrieve a list of all blog posts. (Any authenticated user.)

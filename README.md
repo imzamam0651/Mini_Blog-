@@ -17,7 +17,7 @@ Like Post	              POST	      /api/like/<post_id>/	      Yes
 Comment on Post	        POST	      /api/comment/<post_id>/	    Yes
 
 
-1. REGISTER
+#1. REGISTER
 POST /api/register/
 
 - **Request Body (JSON)**
@@ -36,13 +36,13 @@ curl -X POST http://127.0.0.1:8000/api/register/ \
     "password": "securepassword123"
   }'
 
-#Response (JSON)
+# Response (JSON)
 {
   "token": "0123456789abcdef0123456789abcdef01234567"
 }
 
 
-2. User Login
+#2. User Login
 POST /api/login/
 
 #cURL Example
@@ -59,7 +59,7 @@ curl -X POST http://127.0.0.1:8000/api/login/ \
 }
 
 
-3. Create Post
+#3. Create Post
 Authenticated users can create a new blog post.
 
 POST /api/posts/
@@ -93,7 +93,7 @@ curl -X POST http://127.0.0.1:8000/api/posts/ \
 }
 
 
-4. List All Posts
+#4. List All Posts
 Retrieve a list of all blog posts. (Any authenticated user.)
 
 GET /api/posts/
@@ -128,7 +128,7 @@ curl -X GET http://127.0.0.1:8000/api/posts/ \
 ]
 
 
-5. Get Specific Post (Own-Only)
+#5. Get Specific Post (Own-Only)
 Retrieve a single post by ID. Users can only fetch their own post via this endpoint.
 
 
@@ -161,7 +161,7 @@ If you are the author of post 1:
 401 Unauthorized if no valid token is provided.
 
 
-6. Edit Post
+#6. Edit Post
 Authenticated users can update only their own post.
 
 PUT /api/posts/<post_id>/
@@ -208,7 +208,7 @@ curl -X PUT http://127.0.0.1:8000/api/posts/1/ \
 401 Unauthorized if no valid token is provided.
 
 
-7. Delete Post
+#7. Delete Post
 Authenticated users can delete only their own post.
 
 
@@ -235,7 +235,7 @@ Status Code: 204 No Content on success
 401 Unauthorized if no valid token is provided
 
 
-8. Like Post
+#8. Like Post
 Authenticated users can like any post. Each user can like a given post only once.
 
 POST /api/like/<post_id>/
@@ -268,7 +268,7 @@ If already liked:
 401 Unauthorized if no valid token is provided.
 
 
-9. Comment on Post
+#9. Comment on Post
 Authenticated users can add a comment to any post.
 
 POST /api/comment/<post_id>/

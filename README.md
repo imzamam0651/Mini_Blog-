@@ -1,4 +1,3 @@
-# Mini_Blog-
 # Mini Blog Platform – API Documentation
 
 This Django/Django REST Framework project provides a simple “mini blog” API with user registration, login, CRUD for posts, likes, and comments. All endpoints requiring authentication expect a Token in the `Authorization` header:
@@ -6,16 +5,16 @@ This Django/Django REST Framework project provides a simple “mini blog” API 
 http://127.0.0.1:8000/api/
 
 📂 Complete Endpoints Summary
-Action	                Method	    URL	                    Auth Required
-Register User	        POST	     /api/register/	            No
-Login User	            POST	     /api/login/	            No
-Create Post	            POST	     /api/posts/	            Yes
-List All Posts	        GET	         /api/posts/	            Yes
-Get Specific Post (Own)	GET	         /api/posts/<post_id>/	    Yes
-Edit Post (Own)	        PUT	         /api/posts/<post_id>/	    Yes
-Delete Post (Own)	    DELETE	     /api/posts/<post_id>/	    Yes
-Like Post	            POST	     /api/like/<post_id>/	    Yes
-Comment on Post	        POST	     /api/comment/<post_id>/	Yes
+Action	                Method	        URL	                 Auth Required
+Register User	          POST	      /api/register/	            No
+Login User	            POST	      /api/login/	                No
+Create Post	            POST	      /api/posts/	                Yes
+List All Posts	        GET	        /api/posts/	                Yes
+Get Specific Post (Own)	GET	        /api/posts/<post_id>/	      Yes
+Edit Post (Own)	        PUT	        /api/posts/<post_id>/	      Yes
+Delete Post (Own)	      DELETE	    /api/posts/<post_id>/	      Yes
+Like Post	              POST	      /api/like/<post_id>/	      Yes
+Comment on Post	        POST	      /api/comment/<post_id>/	    Yes
 
 
 1. REGISTER
